@@ -1,0 +1,1 @@
+[{"name":"app.R","content":"library(shiny)\r\n\r\nui <- fluidPage(\r\n  numericInput(\"number\", \"Enter Value\", 50, 0, 100),\r\n  textOutput(\"text\")\r\n)\r\n\r\nserver <- function(input, output, session) {\r\n  output$text <- renderText(paste(\"Your number is\", input$number))\r\n}\r\n\r\nshinyApp(ui, server)","type":"text"}]
