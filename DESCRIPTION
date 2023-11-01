@@ -1,0 +1,14 @@
+Package: demo.shinylive
+Type: Package
+Title: Demo shinylive
+Version: 1.0
+Description: Demo shinylive.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 4.1)
+Imports: 
+    shiny,
+    shinylive
+RoxygenNote: 7.2.3
