@@ -1,6 +1,7 @@
 library(shiny)
 
 ui <- fluidPage(
+  "My shinylive demo",
   numericInput("number", "Enter Value", 50, 0, 100),
   textOutput("text")
 )
