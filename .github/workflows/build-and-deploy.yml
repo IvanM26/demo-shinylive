@@ -26,10 +26,11 @@ jobs:
 
     - name: Run R code and deploy
       run: |
-        R -e "shinylive::export(appdir = 'myapp', destdir = 'docs')"
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
+        git checkout -B gh-pages
+        R -e "shinylive::export(appdir = 'myapp', destdir = 'docs')"
         git add docs
         git commit -m "Deploy to GitHub Pages"
-        git push
+        git push origin gh-pages -f
       shell: bash
